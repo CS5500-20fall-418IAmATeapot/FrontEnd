@@ -24,7 +24,7 @@ this command would check the code format using `prettier`
 
 To auto-fix all the formatting problem, run
 ```bash
-prettier --write .
+prettier --write src/**/*.{tsx,ts,css}
 ```
 
 
