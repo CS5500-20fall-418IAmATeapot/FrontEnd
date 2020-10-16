@@ -26,6 +26,8 @@ jobs:
         run: yarn install
       - name: Prettier test
         run: yarn test
+      - name: build
+        run: yarn build
 
   depoly:
     runs-on: ubuntu-latest
