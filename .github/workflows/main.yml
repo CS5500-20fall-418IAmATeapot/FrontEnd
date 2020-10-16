@@ -20,21 +20,22 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: checkOut
+        uses: actions/checkout@v2
+      - name: Prettier Action
+        # You may pin to the exact commit or the version.
+        # uses: creyD/prettier_action@71bcaf62101319a94cc7403ca9ddc5424be1ee17
+        uses: creyD/prettier_action@v3.0
+        with:
+          prettier_options: --check **/*.{js,md}
+                
+  depoly:
+    runs-on: ubuntu-latest
+    if: github.ref == "refs/heads/main"
+    steps:
       - uses: akhileshns/heroku-deploy@v3.5.7 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "team418-i-am-a-teapot" #Must be unique in Heroku
           heroku_email: "xu.tao1@husky.neu.edu"
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-      
-      
