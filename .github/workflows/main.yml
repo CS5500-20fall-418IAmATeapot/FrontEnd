@@ -22,8 +22,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkOut
         uses: actions/checkout@v2
+      - name: yarn install
+        uses: yarn install
       - name: Prettier test
-        run: npm test
+        run: yarn test
                 
   depoly:
     runs-on: ubuntu-latest
