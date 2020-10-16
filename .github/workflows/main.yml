@@ -27,7 +27,7 @@ jobs:
         # uses: creyD/prettier_action@71bcaf62101319a94cc7403ca9ddc5424be1ee17
         uses: creyD/prettier_action@v3.0
         with:
-          prettier_options: --check **/*.{js,md}
+          prettier_options: --check .
                 
   depoly:
     runs-on: ubuntu-latest
