@@ -6,9 +6,9 @@ name: CI
 # events but only for the main branch
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,7 +28,7 @@ jobs:
         run: yarn test
       - name: build
         run: yarn build
-                
+
   depoly:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
@@ -39,4 +39,3 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "team418-i-am-a-teapot" #Must be unique in Heroku
           heroku_email: "xu.tao1@husky.neu.edu"
-
