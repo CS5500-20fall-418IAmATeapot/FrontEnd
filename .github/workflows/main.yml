@@ -23,7 +23,7 @@ jobs:
       - name: checkOut
         uses: actions/checkout@v2
       - name: yarn install
-        uses: yarn install
+        run: yarn install
       - name: Prettier test
         run: yarn test
                 
