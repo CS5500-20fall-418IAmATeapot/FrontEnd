@@ -15,5 +15,13 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "overrides": [
+    {
+      "files": ["*.tsx","*.ts"],
+      "rules": {
+        "@typescript-eslint/...": "off"
+      }
+    }
+  ]
 }

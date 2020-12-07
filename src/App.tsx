@@ -1,23 +1,45 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { Foot, NavBar } from "./components";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  HomePage,
+  NotFoundPage,
+  OrderConfirmPage,
+  OrderHistoryPage,
+  RestaurantPage,
+  SearchPage,
+} from "./pages";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>start of projecttt</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar />
+        <div className="container">
+          <Switch>
+            <Route path={"/"} exact>
+              <HomePage />
+            </Route>
+            <Route path={"/search"} exact>
+              <SearchPage />
+            </Route>
+            <Route path={"/orderHistory"} exact>
+              <OrderHistoryPage />
+            </Route>
+            <Route path={"/orderConfirm"} exact>
+              <OrderConfirmPage />
+            </Route>
+            <Route path={"/restaurant"} exact>
+              <RestaurantPage />
+            </Route>
+            <Route component={NotFoundPage} />
+          </Switch>
+        </div>
+        <Foot />
+      </div>
+    </Router>
   );
 }
 
