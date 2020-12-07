@@ -1,0 +1,62 @@
+.container {
+  width: 100%;
+  height: 220px;
+  background: var(--saberBlue);
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 40px;
+}
+.imageContainer {
+  margin-right: 40px;
+  justify-self: end;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+img {
+  width: 110px;
+  height: 150px;
+  margin-left: 30px;
+}
+
+.title {
+  display: flex;
+}
+
+.saber {
+  font-size: 36px;
+  color: #e4d8da;
+  font-weight: bold;
+}
+
+.eats {
+  margin-left: 10px;
+  font-size: 36px;
+  color: #e7be7a;
+  font-weight: bold;
+}
+
+.slogan {
+  margin-top: 40px;
+  font-size: 18px;
+  color: #d6d5d5;
+  margin-right: auto;
+  font-weight: 300;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #d6d5d5;
+  border-top: 1px solid #d6d5d5;
+  outline-offset: 10px;
+  margin-right: auto;
+}
