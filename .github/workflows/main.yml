@@ -28,6 +28,8 @@ jobs:
         run: yarn test
       - name: build
         run: yarn build
+        env:
+          CI: "" 
 
   depoly:
     runs-on: ubuntu-latest

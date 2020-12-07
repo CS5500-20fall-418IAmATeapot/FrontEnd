@@ -16,7 +16,12 @@
     "jsx": "react"
   },
   "include": ["src"],
-  "rules": {
-    "no-unused-vars": "off"
-  }
+  "overrides": [
+    {
+      "files": ["*.tsx","*.ts"],
+      "rules": {
+        "@typescript-eslint/...": "off"
+      }
+    }
+  ]
 }
