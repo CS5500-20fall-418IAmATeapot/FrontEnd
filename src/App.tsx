@@ -16,15 +16,6 @@ function App() {
     <Router>
       <div className="App">
         <NavBar />
-        <ItemCard
-          name={"Caffe"}
-          price={4.15}
-          description={
-            "Our dark, rich espresso balanced with steamed milk and a light layer of foa...."
-          }
-          imageURL={"https://i.imgur.com/8qy6ewL.png"}
-          size={400}
-        />
         <div className="container">
           <Switch>
             <Route path={"/"} exact>

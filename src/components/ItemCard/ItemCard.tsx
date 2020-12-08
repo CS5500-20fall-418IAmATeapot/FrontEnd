@@ -14,10 +14,7 @@ type Props = OwnProps;
 
 const ItemCard: FunctionComponent<Props> = (props) => {
   return (
-    <div
-      style={{ width: props.size, height: props.size * 0.56 }}
-      className={style.container}
-    >
+    <div style={{ width: props.size }} className={style.container}>
       <div className={style.infoArea}>
         <div className={style.itemName}>{props.name}</div>
         <div className={style.itemDescription}>{props.description}</div>
