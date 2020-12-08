@@ -1,7 +1,6 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { Foot, NavBar } from "./components";
+import { Foot, ItemCard, NavBar, RestaurantCard } from "./components";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {
   HomePage,
@@ -17,6 +16,15 @@ function App() {
     <Router>
       <div className="App">
         <NavBar />
+        <ItemCard
+          name={"Caffe"}
+          price={4.15}
+          description={
+            "Our dark, rich espresso balanced with steamed milk and a light layer of foa...."
+          }
+          imageURL={"https://i.imgur.com/8qy6ewL.png"}
+          size={400}
+        />
         <div className="container">
           <Switch>
             <Route path={"/"} exact>
