@@ -1,0 +1,87 @@
+.navBar {
+  background: var(--saberBlue);
+  height: 100px;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 37px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuIcon {
+  cursor: pointer;
+}
+
+.menuTitle {
+}
+
+.title {
+  display: flex;
+  margin-left: 15px;
+}
+
+.saber {
+  font-size: 36px;
+  color: #e4d8da;
+  font-weight: bold;
+}
+
+.eats {
+  margin-left: 10px;
+  font-size: 36px;
+  color: #e7be7a;
+  font-weight: bold;
+}
+
+.growBox {
+  flex-grow: 1;
+}
+
+.locationButton {
+  width: 120px;
+  height: 36px;
+  border-radius: 18px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin-right: 29px;
+  cursor: pointer;
+}
+
+.locationIcon {
+  margin-right: 17px;
+}
+
+.inputGroup {
+  width: 240px;
+  height: 38px;
+}
+
+.input {
+  border-radius: 0;
+}
+
+.prepend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  background: white;
+  border-radius: 0;
+  border: none;
+}
+
+.cartBtn {
+  width: 50px;
+  height: 36px;
+  border-radius: 18px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  cursor: pointer;
+}
