@@ -1,76 +1,75 @@
 .container {
-    position: relative;
-    height: 280px;
-    display: grid;
-    grid-template-columns: 90% 10%;
-    grid-template-rows: repeat(5, 20%);
+  position: relative;
+  height: 280px;
+  display: grid;
+  grid-template-columns: 90% 10%;
+  grid-template-rows: repeat(5, 20%);
 }
 
 .imageArea {
-    width: 100%;
-    grid-area: 1 / 1 / 5 / 3;
+  width: 100%;
+  grid-area: 1 / 1 / 5 / 3;
 }
 
 .infoArea {
-    width: 100%;
-    grid-area: 5 / 1 / 6 / 3;
+  width: 100%;
+  grid-area: 5 / 1 / 6 / 3;
 }
 
 .restaurantName {
-    grid-area: 5 / 1 / 6 / 2;
-    position: absolute;
-    height: 20px;
-    left: 0px;
-    top: 0px;
+  grid-area: 5 / 1 / 6 / 2;
+  position: absolute;
+  height: 20px;
+  left: 0px;
+  top: 0px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
 
-    text-align: left;
-    color: black;
+  text-align: left;
+  color: black;
 }
 
 .deliveryInfo {
-    grid-area: 5 / 1 / 6 / 2;
-    position: absolute;
-    left: 0px;
-    top: 25px;
+  grid-area: 5 / 1 / 6 / 2;
+  position: absolute;
+  left: 0px;
+  top: 25px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
 
-    color: #323233;
+  color: #323233;
 }
 
 .ratingBack {
-    grid-area: 5 / 2 / 6 / 3;
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    right: 5px;
-    top: 0px;
-    border-radius: 50%;
+  grid-area: 5 / 2 / 6 / 3;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  right: 5px;
+  top: 0px;
+  border-radius: 50%;
 
-    background: #E6F2ED;
+  background: #e6f2ed;
 }
 
 .rating {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  padding-top: 9px;
+  padding-bottom: 9px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    padding-top: 9px;
-    padding-bottom: 9px;
-
-    color: #05A357;
+  color: #05a357;
 }
