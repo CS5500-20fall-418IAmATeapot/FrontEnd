@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from "react";
 import style from "./style.module.css";
-import { Icon } from "../Icon/Icon";
 
 interface OwnProps {
   name: string;
@@ -16,11 +15,10 @@ type Props = OwnProps;
 const RestaurantCard: FunctionComponent<Props> = (props) => {
   return (
     <div style={{ width: props.size }} className={style.container}>
-      <img
-        className={style.imageArea}
-        src={props.imageURL}
-        alt="restaurant image"
-      />
+      <div
+        className={style.imageContainer}
+        style={{ backgroundImage: `URL(${props.imageURL})` }}
+      ></div>
       <div className={style.infoArea}>
         <div className={style.restaurantName}>{props.name}</div>
         <div className={style.deliveryInfo}>

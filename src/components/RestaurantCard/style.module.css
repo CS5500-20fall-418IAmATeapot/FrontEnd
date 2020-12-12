@@ -6,14 +6,11 @@
   grid-template-rows: repeat(5, 20%);
 }
 
-.imageArea {
-  width: 100%;
+.imageContainer {
   grid-area: 1 / 1 / 5 / 3;
-}
-
-.infoArea {
   width: 100%;
-  grid-area: 5 / 1 / 6 / 3;
+  height: 200px;
+  background-position: center;
 }
 
 .restaurantName {
