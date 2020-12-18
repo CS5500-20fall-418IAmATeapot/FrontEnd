@@ -30,7 +30,7 @@ function App() {
         <Menu />
         <div className="App">
           <NavBar />
-          <div>
+          <div className={"pageContainer"}>
             <Switch>
               <Route path={"/"} exact>
                 <HomePage />

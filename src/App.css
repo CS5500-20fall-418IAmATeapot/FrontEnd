@@ -8,6 +8,10 @@
   pointer-events: none;
 }
 
+.pageContainer{
+  min-height: calc(100vh - 100px);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
