@@ -14,7 +14,7 @@ type Props = OwnProps;
 const NavBar: FunctionComponent<Props> = (props) => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const {isMenuOpen} = useSelector((s:State)=>s);
+  const { isMenuOpen } = useSelector((s: State) => s);
   const search = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       alert("you pressed enter");
@@ -22,8 +22,13 @@ const NavBar: FunctionComponent<Props> = (props) => {
   };
   return (
     <div className={style.navBar}>
-      <Icon onClick={()=>dispatch(toggleMenu)} name={"menu"} size={30} className={style.menuIcon} />
-      <div className={style.title} onClick={()=>history.push("/")}>
+      <Icon
+        onClick={() => dispatch(toggleMenu)}
+        name={"menu"}
+        size={30}
+        className={style.menuIcon}
+      />
+      <div className={style.title} onClick={() => history.push("/")}>
         <div className={style.saber}>Saber</div>
         <div className={style.eats}>Eats</div>
       </div>

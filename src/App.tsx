@@ -3,8 +3,8 @@ import "./App.css";
 import { Foot, ItemCard, Menu, NavBar, RestaurantCard } from "./components";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { createStore, Store, applyMiddleware } from "redux";
-import {initialState} from "reducers/state";
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { initialState } from "reducers/state";
+import { composeWithDevTools } from "redux-devtools-extension";
 import { Provider } from "react-redux";
 import { reducer } from "reducers";
 import {
@@ -19,9 +19,10 @@ import { login } from "./utils";
 import { LoginForm } from "./components/Menu/types";
 
 function App() {
-
-  const store = createStore(reducer, initialState,composeWithDevTools(
-    applyMiddleware())
+  const store = createStore(
+    reducer,
+    initialState,
+    composeWithDevTools(applyMiddleware())
   ) as Store;
   return (
     <Provider store={store}>

@@ -1,16 +1,15 @@
 import { User } from "model";
 
 interface State {
-  isMenuOpen: boolean,
-  isCartOpen: boolean,
-  user?:User
+  isMenuOpen: boolean;
+  isCartOpen: boolean;
+  user?: User;
 }
 
 const initialState: State = {
-  isMenuOpen:false,
+  isMenuOpen: false,
   isCartOpen: false,
 };
 
-
 export type { State };
-export { initialState } ;
+export { initialState };

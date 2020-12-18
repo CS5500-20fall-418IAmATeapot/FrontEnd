@@ -1,43 +1,45 @@
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-
-
-.menuContainer{
+.menuContainer {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(196,196,196,0.54);
+  background: rgba(196, 196, 196, 0.54);
   z-index: 1;
   display: flex;
   animation: fadeIn ease 1s;
 }
 
-.menu{
+.menu {
   width: 330px;
   height: 100%;
   background: white;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   box-sizing: border-box;
   padding: 30px;
 }
 
-.flexRow{
+.flexRow {
   display: flex;
   align-items: center;
   width: 100%;
   margin-bottom: 12px;
 }
 
-.row{
+.row {
   width: 100%;
   margin-bottom: 12px;
 }
 
-.text{
+.text {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -45,20 +47,20 @@
   /* identical to box height, or 150% */
   display: flex;
   align-items: flex-end;
-  color: #373A3C;
+  color: #373a3c;
   margin-bottom: 13px;
 }
 
-.input{
+.input {
   height: 38px;
-  background: #FFFFFF;
-  border: 1px solid #CCCCCC;
+  background: #ffffff;
+  border: 1px solid #cccccc;
   box-sizing: border-box;
   border-radius: 4px;
   width: 100%;
 }
 
-.btn{
+.btn {
   height: 56px;
   display: flex;
   justify-content: center;
@@ -68,23 +70,23 @@
   font-size: 18px;
 }
 
-.center{
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.spaceBwn{
+.spaceBwn {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.blocker{
+.blocker {
   height: 240px;
 }
 
-.appText{
+.appText {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -94,11 +96,11 @@
   cursor: pointer;
 }
 
-.iconBtn{
+.iconBtn {
   width: 106px;
   height: 40px;
   border-radius: 20px;
-  background: #C4C4C4;
+  background: #c4c4c4;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -108,17 +110,16 @@
   align-items: center;
 }
 
-
-.avatar{
+.avatar {
   border-radius: 50%;
 }
 
-.logoutBtn{
-  color:#999999;
+.logoutBtn {
+  color: #999999;
   cursor: pointer;
 }
 
-.hitBox{
+.hitBox {
   height: 100%;
   flex-grow: 1;
 }

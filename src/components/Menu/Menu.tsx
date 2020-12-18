@@ -7,8 +7,8 @@ import { LoginForm, RegisterForm } from "./types";
 import { useDispatch, useSelector } from "react-redux";
 import { State } from "reducers/state";
 import { logout, toggleMenu } from "../../actions";
-import { login,register } from "utils";
-import {login as loginAction, logout as logoutAction} from 'actions';
+import { login, register } from "utils";
+import { login as loginAction, logout as logoutAction } from "actions";
 
 interface OwnProps {}
 
@@ -16,7 +16,7 @@ type Props = OwnProps;
 
 const Menu: FunctionComponent<Props> = (props) => {
   const isOn = useSelector((s: State) => s.isMenuOpen);
-  const {user} = useSelector((s:State)=>s);
+  const { user } = useSelector((s: State) => s);
   const dispatch = useDispatch();
   var content;
   const [status, setStatus] = useState("logging");
@@ -25,26 +25,25 @@ const Menu: FunctionComponent<Props> = (props) => {
   const { register: loginRef, handleSubmit: handleLogin } = useForm<
     LoginForm
   >();
-  const { register: registerRef, handleSubmit: handleRegister } = useForm<RegisterForm>();
+  const { register: registerRef, handleSubmit: handleRegister } = useForm<
+    RegisterForm
+  >();
 
   const onLogin = async (data: LoginForm) => {
     const res = await login(data);
-    if(res === undefined){
-      alert('invalid credentials');
-    }
-    else{
-      dispatch({...loginAction,data:res.data});
+    if (res === undefined) {
+      alert("invalid credentials");
+    } else {
+      dispatch({ ...loginAction, data: res.data });
       setStatus("logged");
     }
   };
 
   const onRegister = async (data: RegisterForm) => {
     const res = await register(data);
-    if(res === undefined){
+    if (res === undefined) {
       alert("username existed");
-    }
-    else
-      setStatus("logging");
+    } else setStatus("logging");
   };
 
   const onLogout = () => {
@@ -128,12 +127,15 @@ const Menu: FunctionComponent<Props> = (props) => {
       <form className={style.menu}>
         <div className={style.flexRow}>
           <Icon size={[56, 56]} name={"appIcon"} className={style.avatar} />
-          <div className={style.appText}>{user?.userName||"user"}</div>
+          <div className={style.appText}>{user?.userName || "user"}</div>
         </div>
 
         <div
           className={style.flexRow}
-          onClick={() => {history.push("/orderHistory");dispatch(toggleMenu)}}
+          onClick={() => {
+            history.push("/orderHistory");
+            dispatch(toggleMenu);
+          }}
         >
           <Icon size={[20, 20]} name={"orderIcon"} />
           <div className={style.appText}>orders</div>

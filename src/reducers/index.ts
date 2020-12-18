@@ -1,16 +1,16 @@
 import { State } from "./state";
 
-export function reducer(stateBefore: State|any, action: any) {
+export function reducer(stateBefore: State | any, action: any) {
   switch (action.type) {
-    case "toggleMenu":{
+    case "toggleMenu": {
       stateBefore.isMenuOpen = !stateBefore.isMenuOpen;
       break;
     }
-    case "login":{
+    case "login": {
       stateBefore.user = action.data;
       break;
     }
-    case "logout":{
+    case "logout": {
       stateBefore.user = undefined;
       break;
     }
