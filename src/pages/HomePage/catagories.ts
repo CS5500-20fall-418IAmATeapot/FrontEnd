@@ -1,42 +1,50 @@
 export const categories = [
   {
-    name: "Fast Food",
-    imageURL: "https://i.imgur.com/ijW98re.jpg",
+    name: "american",
+    title: "American",
   },
   {
-    name: "Fast Food",
-    imageURL: "https://i.imgur.com/ijW98re.jpg",
+    name: "bakery",
+    title: "Bakery",
   },
   {
-    name: "Fast Food",
-    imageURL: "https://i.imgur.com/ijW98re.jpg",
+    name: "bbq",
+    title: "BBQ",
   },
   {
-    name: "Fast Food",
-    imageURL: "https://i.imgur.com/ijW98re.jpg",
+    name: "bubbleTea",
+    title: "Bubble Tea",
   },
   {
-    name: "Fast Food",
-    imageURL: "https://i.imgur.com/ijW98re.jpg",
+    name: "burgers",
+    title: "Burgers",
   },
   {
-    name: "Fast Food",
-    imageURL: "https://i.imgur.com/ijW98re.jpg",
+    name: "coffeeTea",
+    title: "Coffee Tea",
   },
   {
-    name: "Fast Food",
-    imageURL: "https://i.imgur.com/ijW98re.jpg",
+    name: "comfort",
+    title: "Comfort",
   },
   {
-    name: "Fast Food",
-    imageURL: "https://i.imgur.com/ijW98re.jpg",
+    name: "desserts",
+    title: "Desserts",
   },
   {
-    name: "Fast Food",
-    imageURL: "https://i.imgur.com/ijW98re.jpg",
+    name: "fastfood",
+    title: "Fast Food",
   },
   {
-    name: "Fast Food",
-    imageURL: "https://i.imgur.com/ijW98re.jpg",
+    name: "healthy",
+    title: "Healthy",
+  },
+  {
+    name: "pizza",
+    title: "Pizza",
+  },
+  {
+    name: "sandwich",
+    title: "Sandwich",
   },
 ];

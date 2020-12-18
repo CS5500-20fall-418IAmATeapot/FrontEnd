@@ -12,9 +12,10 @@
 
 .carousel {
     position: absolute;
-    top: 12vh;
-    width: 30%;
-    left: 50%;
+    height: 15vh;
+    top: 15vh;
+    width: 40%;
+    left: 55%;
 }
 
 .textOfCarousel {

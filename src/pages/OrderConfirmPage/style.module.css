@@ -1,0 +1,27 @@
+.container {
+    display: grid;
+    min-height: calc(100vh - 100px);
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 50% 50%;
+}
+
+.deliveryArea {
+    grid-area: 1 / 1 / 2 / 2;
+
+}
+
+
+.feeArea {
+    grid-area: 1 / 2 / 1 / 3;
+
+}
+
+.feeList {
+    position: absolute;
+
+}
+
+.paymentArea {
+    grid-area: 2 / 1 / 2 / 2;
+
+}

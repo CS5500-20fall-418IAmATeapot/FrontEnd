@@ -3,7 +3,7 @@ import style from "./style.module.css";
 import { Carousel } from "react-bootstrap";
 import { categories } from "./catagories";
 import { restaurants } from "./restaurant";
-import { CategoryCard, RestaurantCard } from "../../components";
+import { CategoryCard, Icon, RestaurantCard } from "../../components";
 
 interface OwnProps {}
 
@@ -17,25 +17,13 @@ const HomePage: FunctionComponent<Props> = (props) => {
         <div className={style.carousel}>
           <Carousel>
             <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://i.imgur.com/97iplPu.jpg"
-                alt="First slide"
-              />
+              <Icon name={"carousel"} size={200} />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://i.imgur.com/97iplPu.jpg"
-                alt="Third slide"
-              />
+              <Icon name={"carousel"} size={200} />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://i.imgur.com/97iplPu.jpg"
-                alt="Third slide"
-              />
+              <Icon name={"carousel"} size={200} />
             </Carousel.Item>
           </Carousel>
         </div>
@@ -43,11 +31,7 @@ const HomePage: FunctionComponent<Props> = (props) => {
 
       <div className={style.categoryBar}>
         {categories.map((category) => (
-          <CategoryCard
-            size={8}
-            name={category.name}
-            imageURL={category.imageURL}
-          />
+          <CategoryCard size={8} name={category.name} title={category.title} />
         ))}
       </div>
       <div className={style.popular}>

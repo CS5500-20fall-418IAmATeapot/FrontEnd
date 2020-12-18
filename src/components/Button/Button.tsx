@@ -12,7 +12,7 @@ const Button: FunctionComponent<Props> = (props) => {
   return (
     <button
       onClick={props.onClick}
-      style={{ width: props.width }}
+      style={{ width: `${props.width}vw` }}
       type={"submit"}
       className={style.btn}
     >
