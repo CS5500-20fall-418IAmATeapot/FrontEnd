@@ -5,12 +5,14 @@ interface OwnProps {
   name: string;
   size: number | Array<number>;
   className?: string;
+  onClick?:any
 }
 
 type Props = OwnProps;
 
-const Icon: FunctionComponent<Props> = ({ className, name, size }) => {
+const Icon: FunctionComponent<Props> = (props:Props) => {
   var styleObj: any = {};
+  const size = props.size;
   if (size instanceof Number) {
     styleObj["width"] = size;
   } else if (size instanceof Array) {
@@ -18,7 +20,7 @@ const Icon: FunctionComponent<Props> = ({ className, name, size }) => {
     styleObj["height"] = size[1];
   }
   return (
-    <img src={iconMap[name]} alt="" style={styleObj} className={className} />
+    <img onClick={props.onClick} src={iconMap[props.name]} alt="" style={styleObj} className={props.className} />
   );
 };
 
