@@ -21,4 +21,10 @@ interface User {
   address?: Address;
 }
 
-export type { User, Name, Address };
+interface SearchFilter{
+  price:string,
+  keyword:string,
+  sortBy:"default"
+}
+
+export type { User, Name, Address, SearchFilter };
