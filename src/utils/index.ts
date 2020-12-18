@@ -46,13 +46,13 @@ const register = async (registerForm: RegisterForm): Promise<any> => {
   return data;
 };
 
-const searchRestaurant= async(filter:SearchFilter)=>{
+const searchRestaurant = async (filter: SearchFilter) => {
   const data = await axios
-  .get("/restaurant/search",{params:filter})
-  .then((res)=>res.data)
-  .catch((e:Error)=>undefined)
+    .get("/restaurant/search", { params: filter })
+    .then((res) => res.data)
+    .catch((e: Error) => undefined);
   return data.data;
-}
+};
 
 // const searchRestaurants()
-export { login, register, searchRestaurant};
+export { login, register, searchRestaurant };

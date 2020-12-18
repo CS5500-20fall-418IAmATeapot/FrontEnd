@@ -14,7 +14,6 @@
   background-position: center;
 }
 
-
 .restaurantName {
   grid-area: 11 / 1 / 12 / 2;
   position: absolute;
@@ -49,7 +48,6 @@
 }
 
 .ratingBack {
-
   grid-area: 11 / 2 / 12 / 3;
   position: absolute;
   width: 32px;

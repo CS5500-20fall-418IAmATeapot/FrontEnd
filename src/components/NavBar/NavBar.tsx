@@ -3,7 +3,7 @@ import style from "./style.module.css";
 import { Icon } from "components";
 import { FormControl, InputGroup } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu,search as searchAction } from "../../actions";
+import { toggleMenu, search as searchAction } from "../../actions";
 import { State } from "../../reducers/state";
 import { useHistory } from "react-router";
 
@@ -13,23 +13,23 @@ type Props = OwnProps;
 
 const NavBar: FunctionComponent<Props> = (props) => {
   const dispatch = useDispatch();
-  const [keyword,setKeyword] = useState("");
+  const [keyword, setKeyword] = useState("");
   const history = useHistory();
   const { isMenuOpen } = useSelector((s: State) => s);
   const search = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      dispatch({...searchAction,data:keyword})
-      setKeyword("")
-      history.push("search")
+      dispatch({ ...searchAction, data: keyword });
+      setKeyword("");
+      history.push("search");
     }
   };
-  const onHomeBtnClicked = () =>{
-    history.push("/")
-  }
+  const onHomeBtnClicked = () => {
+    history.push("/");
+  };
 
-  const changeKeyword = (e:ChangeEvent<HTMLInputElement>)=>{
-    setKeyword(e.target.value)
-  }
+  const changeKeyword = (e: ChangeEvent<HTMLInputElement>) => {
+    setKeyword(e.target.value);
+  };
   return (
     <div className={style.navBar}>
       <Icon
@@ -62,9 +62,9 @@ const NavBar: FunctionComponent<Props> = (props) => {
           aria-label="Username"
           aria-describedby="basic-addon1"
           className={style.input}
-          value = {keyword}
+          value={keyword}
           onKeyPress={search}
-          onChange ={changeKeyword}
+          onChange={changeKeyword}
         />
       </InputGroup>
       <div className={style.cartBtn}>

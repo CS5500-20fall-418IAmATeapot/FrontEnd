@@ -14,7 +14,7 @@ export function reducer(stateBefore: State | any, action: any) {
       stateBefore.user = undefined;
       break;
     }
-    case "search":{
+    case "search": {
       stateBefore.keyword = action.data;
       break;
     }

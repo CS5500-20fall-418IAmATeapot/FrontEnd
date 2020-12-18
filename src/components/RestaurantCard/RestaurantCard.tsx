@@ -14,7 +14,7 @@ type Props = OwnProps;
 
 const RestaurantCard: FunctionComponent<Props> = (props) => {
   return (
-    <div style={{ width: props.size+"vw" }} className={style.container}>
+    <div style={{ width: props.size + "vw" }} className={style.container}>
       <div
         className={style.imageContainer}
         style={{ backgroundImage: `URL(${props.imageURL})` }}

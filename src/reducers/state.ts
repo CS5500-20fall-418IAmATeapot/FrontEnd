@@ -4,13 +4,13 @@ interface State {
   isMenuOpen: boolean;
   isCartOpen: boolean;
   user?: User;
-  keyword:string|undefined;
+  keyword: string | undefined;
 }
 
 const initialState: State = {
   isMenuOpen: false,
   isCartOpen: false,
-  keyword:undefined,
+  keyword: undefined,
 };
 
 export type { State };

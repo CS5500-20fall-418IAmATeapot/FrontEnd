@@ -25,12 +25,12 @@ test("login", async () => {
   console.log(res);
 });
 
-test("searchRestaurant", async ()=>{
-  const filter:SearchFilter={
-    price:"$",
-    keyword:"Chinese",
-    sortBy:"default",
-  }
+test("searchRestaurant", async () => {
+  const filter: SearchFilter = {
+    price: "$",
+    keyword: "Chinese",
+    sortBy: "default",
+  };
   const res = await searchRestaurant(filter);
-  console.log(res)
+  console.log(res);
 });
