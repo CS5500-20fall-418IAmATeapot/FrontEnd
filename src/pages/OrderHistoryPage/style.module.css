@@ -5,7 +5,7 @@
   grid-template-columns: repeat(10, 10%);
   grid-template-rows: repeat(5, 20%);
   overflow: scroll;
-  height: calc(100vh - 100px)
+  height: calc(100vh - 100px);
 }
 
 .titleContainer {
