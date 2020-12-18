@@ -7,6 +7,7 @@
   padding: 37px;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .menuIcon {
@@ -19,6 +20,7 @@
 .title {
   display: flex;
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .saber {
@@ -58,6 +60,7 @@
 .inputGroup {
   width: 240px;
   height: 38px;
+  position: relative;
 }
 
 .input {

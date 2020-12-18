@@ -1,0 +1,125 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.menuContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(196, 196, 196, 0.54);
+  z-index: 1;
+  display: flex;
+  animation: fadeIn ease 1s;
+}
+
+.menu {
+  width: 330px;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.row {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: flex-end;
+  color: #373a3c;
+  margin-bottom: 13px;
+}
+
+.input {
+  height: 38px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.btn {
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: black;
+  font-size: 18px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spaceBwn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blocker {
+  height: 240px;
+}
+
+.appText {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  margin-left: 13px;
+  cursor: pointer;
+}
+
+.iconBtn {
+  width: 106px;
+  height: 40px;
+  border-radius: 20px;
+  background: #c4c4c4;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.logoutBtn {
+  color: #999999;
+  cursor: pointer;
+}
+
+.hitBox {
+  height: 100%;
+  flex-grow: 1;
+}

@@ -2,22 +2,33 @@ import React, { FunctionComponent } from "react";
 import style from "./style.module.css";
 import { Icon } from "components";
 import { FormControl, InputGroup } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleMenu } from "../../actions";
+import { State } from "../../reducers/state";
+import { useHistory } from "react-router";
 
 interface OwnProps {}
 
 type Props = OwnProps;
 
 const NavBar: FunctionComponent<Props> = (props) => {
-  var search = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const { isMenuOpen } = useSelector((s: State) => s);
+  const search = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       alert("you pressed enter");
     }
   };
-  // @ts-ignore
   return (
     <div className={style.navBar}>
-      <Icon name={"menu"} size={30} className={style.menuIcon} />
-      <div className={style.title}>
+      <Icon
+        onClick={() => dispatch(toggleMenu)}
+        name={"menu"}
+        size={30}
+        className={style.menuIcon}
+      />
+      <div className={style.title} onClick={() => history.push("/")}>
         <div className={style.saber}>Saber</div>
         <div className={style.eats}>Eats</div>
       </div>

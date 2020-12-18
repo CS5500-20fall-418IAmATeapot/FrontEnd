@@ -2,7 +2,10 @@
 
 This is front-end of our food delivery project in ReactJS and TypeJS.
 
-## get start
+## Main branch Preview
+https://team418-i-am-a-teapot.herokuapp.com/
+
+## Get start
 To start with, install all the dependency by command
 
 ```bash
