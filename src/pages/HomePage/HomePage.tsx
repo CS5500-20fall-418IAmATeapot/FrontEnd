@@ -14,16 +14,19 @@ const HomePage: FunctionComponent<Props> = (props) => {
     <div className={style.container}>
       <div className={style.carouselContainer}>
         <div className={style.textOfCarousel}>Crave it? Get it.</div>
+        <div className={style.subtextOfCarousel}>
+          Here is restaurant we recommended.
+        </div>
         <div className={style.carousel}>
           <Carousel>
             <Carousel.Item>
-              <Icon name={"carousel"} size={300} />
+              <Icon name={"carousel"} size={[500, 500]} />
             </Carousel.Item>
             <Carousel.Item>
-              <Icon name={"carousel"} size={300} />
+              <Icon name={"carousel"} size={[500, 500]} />
             </Carousel.Item>
             <Carousel.Item>
-              <Icon name={"carousel"} size={300} />
+              <Icon name={"carousel"} size={[500, 500]} />
             </Carousel.Item>
           </Carousel>
         </div>
