@@ -21,6 +21,8 @@ import healthy from "assets/images/healthy.svg";
 import pizza from "assets/images/pizza.svg";
 import sandwich from "assets/images/sandwich.svg";
 import carousel from "assets/images/carousel.svg";
+import creditCard from "assets/images/creditCard.svg";
+import paypal from "assets/images/paypal.svg";
 
 export const iconMap: Record<string, any> = {
   menu,
@@ -46,4 +48,6 @@ export const iconMap: Record<string, any> = {
   pizza,
   sandwich,
   carousel,
+  creditCard,
+  paypal,
 };

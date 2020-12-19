@@ -34,7 +34,9 @@ const HomePage: FunctionComponent<Props> = (props) => {
           <CategoryCard size={8} name={category.name} title={category.title} />
         ))}
       </div>
+
       <div className={style.popular}>
+        <div className={style.divider}></div>
         <div className={style.textDivider}>Popular Near You</div>
         <div className={style.popularContainer}>
           {restaurants.map((restaurant) => (
