@@ -13,17 +13,23 @@ const HomePage: FunctionComponent<Props> = (props) => {
   return (
     <div className={style.container}>
       <div className={style.carouselContainer}>
-        <div className={style.textOfCarousel}>Crave it? Get it.</div>
+        <div>
+          <div className={style.textOfCarousel}>Crave it? Get it.</div>
+          <div className={style.subtextOfCarousel}>
+            Here is restaurant we recommended.
+          </div>
+        </div>
+
         <div className={style.carousel}>
           <Carousel>
             <Carousel.Item>
-              <Icon name={"carousel"} size={200} />
+              <Icon name={"carousel"} size={[400, 400]} />
             </Carousel.Item>
             <Carousel.Item>
-              <Icon name={"carousel"} size={200} />
+              <Icon name={"carousel"} size={[400, 400]} />
             </Carousel.Item>
             <Carousel.Item>
-              <Icon name={"carousel"} size={200} />
+              <Icon name={"carousel"} size={[400, 400]} />
             </Carousel.Item>
           </Carousel>
         </div>
@@ -34,9 +40,8 @@ const HomePage: FunctionComponent<Props> = (props) => {
           <CategoryCard size={8} name={category.name} title={category.title} />
         ))}
       </div>
-
+      <div className={style.divider}></div>
       <div className={style.popular}>
-        <div className={style.divider}></div>
         <div className={style.textDivider}>Popular Near You</div>
         <div className={style.popularContainer}>
           {restaurants.map((restaurant) => (
