@@ -1,6 +1,7 @@
 import axios from "axios";
 import { LoginForm, RegisterForm } from "components/Menu/types";
 import { BACKEND_URL } from "../constants";
+import { SearchFilter } from "../model";
 axios.defaults.baseURL = BACKEND_URL;
 axios.defaults.headers.post["Content-Type"] = "application/json;charset=utf-8";
 axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
@@ -44,4 +45,14 @@ const register = async (registerForm: RegisterForm): Promise<any> => {
     });
   return data;
 };
-export { login, register };
+
+const searchRestaurant = async (filter: SearchFilter) => {
+  const data = await axios
+    .get("/restaurant/search", { params: filter })
+    .then((res) => res.data)
+    .catch((e: Error) => undefined);
+  return data.data;
+};
+
+// const searchRestaurants()
+export { login, register, searchRestaurant };

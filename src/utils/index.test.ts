@@ -1,5 +1,6 @@
-import { login, register } from "./index";
+import { login, register, searchRestaurant } from "./index";
 import { LoginForm, RegisterForm } from "../components/Menu/types";
+import { SearchFilter } from "../model";
 
 test("register", async () => {
   const form: RegisterForm = {
@@ -21,5 +22,15 @@ test("login", async () => {
   };
 
   const res = await login(loginForm);
+  console.log(res);
+});
+
+test("searchRestaurant", async () => {
+  const filter: SearchFilter = {
+    price: "$",
+    keyword: "Chinese",
+    sortBy: "default",
+  };
+  const res = await searchRestaurant(filter);
   console.log(res);
 });
