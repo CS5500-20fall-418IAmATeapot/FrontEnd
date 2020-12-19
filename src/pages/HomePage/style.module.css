@@ -28,7 +28,6 @@
 }
 
 .subtextOfCarousel {
-
   margin-left: 10vw;
   text-align: left;
   color: white;
@@ -67,5 +66,3 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
-
