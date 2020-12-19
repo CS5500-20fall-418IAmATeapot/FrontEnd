@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 100px);
+}
+
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #122329;
+  height: 30vh;
+  min-height: 400px;
+}
+
+.carousel {
+  height: 200px;
+  width: 40%;
+  margin-left: 20%;
+  margin-bottom: 200px;
+}
+
+.textOfCarousel {
+  margin-left: 10vw;
+  text-align: left;
+  color: white;
+  font-size: xx-large;
+}
+
+.subtextOfCarousel {
+  margin-left: 10vw;
+  text-align: left;
+  color: white;
+  font-size: 20px;
+}
+
+.categoryBar {
+  display: flex;
+  justify-content: space-around;
+  min-width: 1400px;
+  height: 100px;
+  margin-top: 3vh;
+  margin-bottom: 4vh;
+  min-height: 100px;
+}
+
+.divider {
+  margin-left: 2vw;
+  margin-bottom: 3vh;
+  margin-right: 2vw;
+  border: 1px solid #adadad;
+}
+
+.textDivider {
+  text-align: left;
+  font-size: xx-large;
+  font-weight: bold;
+  position: relative;
+  left: 2vw;
+  margin-bottom: 3vh;
+}
+
+.popular {
+}
+
+.popularContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
