@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import style from "./style.module.css";
+import { useHistory } from "react-router";
 
 interface OwnProps {
   name: string;
@@ -13,8 +14,16 @@ interface OwnProps {
 type Props = OwnProps;
 
 const RestaurantCard: FunctionComponent<Props> = (props) => {
+  const history = useHistory();
+  const onCardClicked = () => {
+    history.push("restaurant");
+  };
   return (
-    <div style={{ width: props.size + "vw" }} className={style.container}>
+    <div
+      style={{ width: props.size + "vw" }}
+      className={style.container}
+      onClick={onCardClicked}
+    >
       <div
         className={style.imageContainer}
         style={{ backgroundImage: `URL(${props.imageURL})` }}

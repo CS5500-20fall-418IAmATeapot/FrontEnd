@@ -6,23 +6,28 @@ import { Button, Icon } from "../../components";
 import { Chip } from "@material-ui/core";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import { State } from "../../reducers/state";
+import { clearCart } from "../../actions";
 
 interface OwnProps {}
 
 type Props = OwnProps;
 
 const OrderConfirmPage: FunctionComponent<Props> = (props) => {
+  const cart = useSelector((s: State) => s.cart);
   const fee: Fee = {
-    itemNum: 5,
-    item: 47.05,
-    service: 4.5,
-    delivery: 5.49,
-    total: 57.09,
+    itemNum: cart.length,
+    item: cart.reduce((c, item) => c + item.price, 0),
+    service: 4,
+    delivery: 3,
+    total: cart.reduce((c, item) => c + item.price, 0) + 7,
   };
+  const dispatch = useDispatch();
 
   const [hasInput, setHasInput] = useState(false);
   const saveInput = () => {
-    alert("Are you sure?");
+    alert("Address Confirmed");
     setHasInput(true);
   };
   const history = useHistory();
@@ -116,7 +121,7 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
           </div>
         </form>
         <div onClick={saveInput}>
-          <Button text={"Save & Continue"} width={53} disabled={hasInput} />
+          <Button text={"Save & Continue"} width={"53vw"} disabled={hasInput} />
         </div>
       </div>
       <div className={style.feeArea}>
@@ -148,9 +153,13 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
 
         <Button
           text={"Place an order"}
-          width={27}
+          width={"27vw"}
           disabled={!hasInput}
-          onClick={() => history.push("/")}
+          onClick={() => {
+            alert("order placed");
+            dispatch(clearCart);
+            history.push("/");
+          }}
         />
       </div>
       <div className={style.paymentArea}>

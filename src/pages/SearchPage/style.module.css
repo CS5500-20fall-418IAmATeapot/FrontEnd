@@ -44,4 +44,9 @@
 .labelText {
   margin-left: 20px;
   font-size: 24px;
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-row-gap: 10px;
+  flex-direction: column;
+  padding-left: 20px;
+  justify-items: left;
 }

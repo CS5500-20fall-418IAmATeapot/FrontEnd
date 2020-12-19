@@ -1,0 +1,93 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.cartContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.hitBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.cartMenu {
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  background: white;
+  animation: fadeIn ease 1s;
+  z-index: 2;
+  top: 40px;
+  right: 60px;
+  border-radius: 10px;
+  display: grid;
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-row-gap: 10px;
+  padding: 30px;
+}
+
+.itemList {
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.item {
+  min-height: 37px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  border-bottom: 1px beige solid;
+}
+
+.totalNum {
+  position: absolute;
+  min-width: 40px;
+  height: 40px;
+  top: calc(50% - 20px);
+  left: 5px;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.totalPrice {
+  position: absolute;
+  min-width: 40px;
+  height: 40px;
+  top: calc(50% - 20px);
+  right: 5px;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.itemName {
+  justify-self: left;
+}
+
+.itemPrice {
+  justify-self: right;
+}
+
+.btnContainer {
+  position: relative;
+}
+
+.itemList::-webkit-scrollbar {
+  display: none;
+}

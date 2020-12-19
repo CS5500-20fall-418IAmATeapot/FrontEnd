@@ -1,4 +1,4 @@
-import { login, register, searchRestaurant } from "./index";
+import { getMenuByResId, login, register, searchRestaurant } from "./index";
 import { LoginForm, RegisterForm } from "../components/Menu/types";
 import { SearchFilter } from "../model";
 
@@ -32,5 +32,11 @@ test("searchRestaurant", async () => {
     sortBy: "default",
   };
   const res = await searchRestaurant(filter);
+  console.log(res);
+});
+
+test("getMenuByResId", async () => {
+  const resId = 15;
+  const res = await getMenuByResId(resId);
   console.log(res);
 });

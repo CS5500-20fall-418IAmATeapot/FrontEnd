@@ -3,7 +3,7 @@ import style from "./style.module.css";
 import { Icon } from "components";
 import { FormControl, InputGroup } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu, search as searchAction } from "../../actions";
+import { toggleMenu, search as searchAction, toggleCart } from "../../actions";
 import { State } from "../../reducers/state";
 import { useHistory } from "react-router";
 
@@ -67,7 +67,7 @@ const NavBar: FunctionComponent<Props> = (props) => {
           onChange={changeKeyword}
         />
       </InputGroup>
-      <div className={style.cartBtn}>
+      <div className={style.cartBtn} onClick={() => dispatch(toggleCart)}>
         <Icon name={"cart"} size={20} />
       </div>
     </div>
