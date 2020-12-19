@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Foot, ItemCard, Menu, NavBar, RestaurantCard } from "./components";
+import { CartMenu, Foot, ItemCard, Menu, NavBar, RestaurantCard } from "./components";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { createStore, Store, applyMiddleware } from "redux";
 import { initialState } from "reducers/state";
@@ -28,6 +28,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <Menu />
+        <CartMenu/>
         <div className="App">
           <NavBar />
           <div className={"pageContainer"}>

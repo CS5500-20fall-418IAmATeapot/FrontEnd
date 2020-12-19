@@ -1,3 +1,11 @@
+interface Restaurant{
+  id:number,
+  name:string,
+  addressId:number
+  imageURL:string,
+  tags:Array<string>
+}
+
 interface Address {
   line1: string;
   line2: string;
@@ -27,4 +35,12 @@ interface SearchFilter {
   sortBy: "default";
 }
 
-export type { User, Name, Address, SearchFilter };
+interface Item{
+  id:number,
+  name:string,
+  price:number,
+  description:string,
+  imageURL:string
+}
+
+export type { User, Name, Address, SearchFilter, Restaurant, Item };

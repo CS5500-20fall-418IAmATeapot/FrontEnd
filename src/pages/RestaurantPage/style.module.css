@@ -1,0 +1,55 @@
+.imageContainer{
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-size: 100%;
+  background-position: center;
+}
+
+.restaurantInfo{
+  height: 250px;
+  width: 660px;
+  display: grid;
+  background: white;
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-row-gap: 20px;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 40px;
+  justify-items: left;
+}
+
+.title{
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+}
+
+.tagsInfo{
+
+}
+.deliverInfo{
+  display: flex;
+}
+.rating{
+  color:#05A357 ;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.cuisineList{
+  padding-left: 20px;
+  margin-bottom: 10px;
+
+}
+.cuisineContainer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-row-gap: 30px;
+  grid-column-gap: 15px;
+  overflow: hidden;
+
+}
