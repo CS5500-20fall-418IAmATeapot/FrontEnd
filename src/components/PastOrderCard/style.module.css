@@ -1,0 +1,101 @@
+.container {
+  position: relative;
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(4, 25%);
+  border: 1px solid #cccccc;
+  margin-bottom: 30px;
+}
+
+.imageArea {
+  height: 100%;
+  width: 100%;
+  grid-area: 1 / 1 / 5 / 3;
+}
+
+.infoArea {
+  grid-area: 1 / 1 / 5 / 4;
+  background: white;
+}
+
+.itemName {
+  grid-area: 1 / 4 / 2 / 8;
+  position: absolute;
+  left: 10%;
+  top: 30%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 28px;
+
+  color: black;
+}
+
+.itemDescription {
+  grid-area: 2 / 4 / 3 / 7;
+  height: 50px;
+  position: absolute;
+  left: 13%;
+  right: 15%;
+  top: 10%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 25px;
+  text-align: left;
+  overflow: hidden;
+  display: -webkit-box;
+
+  color: black;
+}
+
+.time {
+  grid-area: 2 / 6 / 3 / 10;
+  height: 50px;
+  position: absolute;
+  left: 10%;
+  right: 15%;
+  top: 10%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 25px;
+  text-align: left;
+  overflow: hidden;
+  display: -webkit-box;
+
+  color: black;
+}
+
+.menu {
+  grid-area: 3 / 4 / 4 / 8;
+  height: 50px;
+  position: absolute;
+  left: 10%;
+  right: 15%;
+  top: 10%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: left;
+  overflow: hidden;
+  display: -webkit-box;
+
+  color: black;
+}
+
+.button {
+  grid-area: 2 / 10 / 2 / 11;
+  height: 50px;
+  position: absolute;
+}
