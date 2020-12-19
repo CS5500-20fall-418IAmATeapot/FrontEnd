@@ -28,7 +28,7 @@ const RestaurantPage: FunctionComponent<Props> = (props) => {
       setMenuData(res);
     }
     getData();
-  },[restaurant])
+  },[])
 
   const tags = restaurant.tags;
   [tags[0],tags[tags.length-1]] = [tags[tags.length-1],tags[0]];

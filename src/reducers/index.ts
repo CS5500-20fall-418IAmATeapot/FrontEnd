@@ -39,6 +39,10 @@ export function reducer(stateBefore: State | any, action: any) {
       break;
 
     }
+    case "clearCart":{
+      stateBefore.cart = []
+      break;
+    }
     default:
   }
   return stateBefore;

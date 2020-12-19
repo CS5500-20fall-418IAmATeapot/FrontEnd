@@ -5,4 +5,5 @@ const search = { type: "search" };
 const toggleCart = {type:"toggleCart"}
 const addCart = {type:"addCart"};
 const removeCart = {type:"removeCart"};
-export { toggleMenu, login, logout, search, addCart, removeCart, toggleCart };
+const clearCart = {type:"clearCart"};
+export { toggleMenu, login, logout, search, addCart, removeCart, toggleCart, clearCart};

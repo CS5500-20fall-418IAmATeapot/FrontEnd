@@ -42,6 +42,7 @@ const CartMenu: FunctionComponent<Props> = (props) => {
       <div
         className={style.btnContainer}
         onClick={()=>{
+          dispatch(toggleCart);
           history.push("orderConfirm");
         }}
       >
