@@ -17,13 +17,13 @@ const HomePage: FunctionComponent<Props> = (props) => {
         <div className={style.carousel}>
           <Carousel>
             <Carousel.Item>
-              <Icon name={"carousel"} size={200} />
+              <Icon name={"carousel"} size={300} />
             </Carousel.Item>
             <Carousel.Item>
-              <Icon name={"carousel"} size={200} />
+              <Icon name={"carousel"} size={300} />
             </Carousel.Item>
             <Carousel.Item>
-              <Icon name={"carousel"} size={200} />
+              <Icon name={"carousel"} size={300} />
             </Carousel.Item>
           </Carousel>
         </div>

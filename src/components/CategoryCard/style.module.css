@@ -1,13 +1,13 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .imageArea {
-    height: 70%;
+  height: 70%;
 }
 
 .textArea {
-    height: 30%;
+  height: 30%;
 }
