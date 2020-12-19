@@ -1,11 +1,11 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useState } from "react";
 import { Fee } from "./types";
-import { deliveryForm } from "./types";
+import { DeliveryForm } from "./types";
 import style from "./style.module.css";
 import { Button, Icon } from "../../components";
 import { Chip } from "@material-ui/core";
 import { useForm } from "react-hook-form";
-import { LoginForm } from "../../components/Menu/types";
+import { useHistory } from "react-router";
 
 interface OwnProps {}
 
@@ -19,6 +19,13 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
     delivery: 5.49,
     total: 57.09,
   };
+
+  const [hasInput, setHasInput] = useState(false);
+  const saveInput = () => {
+    alert("Are you sure?");
+    setHasInput(true);
+  };
+  const history = useHistory();
 
   const { register: deliveryRef, handleSubmit: handleDelivery } = useForm();
   //TODO onDelivery
@@ -38,6 +45,7 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
               className={style.input}
               placeholder={"Address First Line"}
               ref={deliveryRef}
+              readOnly={hasInput}
             />
           </div>
           <div className={style.row}>
@@ -46,6 +54,7 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
               className={style.input}
               placeholder={"Address Second Line"}
               ref={deliveryRef}
+              readOnly={hasInput}
             />
           </div>
 
@@ -56,6 +65,7 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
               style={{ width: "30%", marginRight: "5%" }}
               placeholder={"City"}
               ref={deliveryRef}
+              readOnly={hasInput}
             />
             <input
               name="state"
@@ -63,6 +73,7 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
               style={{ width: "30%", marginRight: "5%" }}
               placeholder={"State"}
               ref={deliveryRef}
+              readOnly={hasInput}
             />
             <input
               name="zipcode"
@@ -70,6 +81,7 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
               style={{ width: "30%" }}
               placeholder={"Zip Code"}
               ref={deliveryRef}
+              readOnly={hasInput}
             />
           </div>
 
@@ -79,10 +91,13 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
               className={style.input}
               placeholder={"Add delivery instructions"}
               ref={deliveryRef}
+              readOnly={hasInput}
             />
           </div>
         </form>
-        <Button text={"Save & Continue"} width={53} disabled={true} />
+        <div onClick={saveInput}>
+          <Button text={"Save & Continue"} width={53} disabled={hasInput} />
+        </div>
       </div>
       <div className={style.feeArea}>
         <div className={style.feeList}>
@@ -111,7 +126,12 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
           </table>
         </div>
 
-        <Button text={"Place an order"} width={27} disabled={true} />
+        <Button
+          text={"Place an order"}
+          width={27}
+          disabled={!hasInput}
+          onClick={() => history.push("/")}
+        />
       </div>
       <div className={style.paymentArea}>
         <div className={style.paymentText}>Payment</div>

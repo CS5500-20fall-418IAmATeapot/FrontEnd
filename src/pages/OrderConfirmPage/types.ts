@@ -8,7 +8,7 @@ export interface Fee {
   total: number;
 }
 
-export interface deliveryForm {
+export interface DeliveryForm {
   address: Address;
   instructions: string;
 }
