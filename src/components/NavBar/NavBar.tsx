@@ -67,10 +67,7 @@ const NavBar: FunctionComponent<Props> = (props) => {
           onChange={changeKeyword}
         />
       </InputGroup>
-      <div
-        className={style.cartBtn}
-        onClick={()=>dispatch(toggleCart)}
-      >
+      <div className={style.cartBtn} onClick={() => dispatch(toggleCart)}>
         <Icon name={"cart"} size={20} />
       </div>
     </div>

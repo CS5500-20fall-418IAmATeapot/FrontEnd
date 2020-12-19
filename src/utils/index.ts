@@ -54,13 +54,13 @@ const searchRestaurant = async (filter: SearchFilter) => {
   return data.data;
 };
 
-const getMenuByResId = async (restaurantId:number) =>{
+const getMenuByResId = async (restaurantId: number) => {
   const data = await axios
-  .get(`/restaurant/restaurantMenu/${restaurantId}`)
-  .then((res)=>res.data)
-  .catch(e=>undefined)
-  return data.data
-}
+    .get(`/restaurant/restaurantMenu/${restaurantId}`)
+    .then((res) => res.data)
+    .catch((e) => undefined);
+  return data.data;
+};
 
 // const searchRestaurants()
-export { login, register, searchRestaurant, getMenuByResId};
+export { login, register, searchRestaurant, getMenuByResId };

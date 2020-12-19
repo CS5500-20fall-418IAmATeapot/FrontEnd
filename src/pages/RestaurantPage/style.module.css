@@ -1,4 +1,4 @@
-.imageContainer{
+.imageContainer {
   height: 400px;
   width: 100%;
   display: flex;
@@ -8,7 +8,7 @@
   background-position: center;
 }
 
-.restaurantInfo{
+.restaurantInfo {
   height: 250px;
   width: 660px;
   display: grid;
@@ -21,35 +21,32 @@
   justify-items: left;
 }
 
-.title{
+.title {
   font-size: 36px;
   font-weight: bold;
   display: flex;
   justify-content: left;
 }
 
-.tagsInfo{
-
+.tagsInfo {
 }
-.deliverInfo{
+.deliverInfo {
   display: flex;
 }
-.rating{
-  color:#05A357 ;
+.rating {
+  color: #05a357;
   margin-left: 5px;
   margin-right: 5px;
 }
 
-.cuisineList{
+.cuisineList {
   padding-left: 20px;
   margin-bottom: 10px;
-
 }
-.cuisineContainer{
+.cuisineContainer {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 30px;
   grid-column-gap: 15px;
   overflow: hidden;
-
 }

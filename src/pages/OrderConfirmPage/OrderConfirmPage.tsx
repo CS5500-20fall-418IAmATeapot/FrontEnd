@@ -15,17 +15,15 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const OrderConfirmPage: FunctionComponent<Props> = (props) => {
-  const cart = useSelector((s:State)=>s.cart)
+  const cart = useSelector((s: State) => s.cart);
   const fee: Fee = {
     itemNum: cart.length,
-    item: cart.reduce((c,item)=>c+item.price,0),
+    item: cart.reduce((c, item) => c + item.price, 0),
     service: 4,
     delivery: 3,
-    total:cart.reduce((c,item)=>c+item.price,0)+7
+    total: cart.reduce((c, item) => c + item.price, 0) + 7,
   };
   const dispatch = useDispatch();
-
-
 
   const [hasInput, setHasInput] = useState(false);
   const saveInput = () => {

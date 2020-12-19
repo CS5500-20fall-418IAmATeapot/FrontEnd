@@ -35,8 +35,8 @@ test("searchRestaurant", async () => {
   console.log(res);
 });
 
-test("getMenuByResId", async ()=>{
+test("getMenuByResId", async () => {
   const resId = 15;
   const res = await getMenuByResId(resId);
-  console.log(res)
+  console.log(res);
 });

@@ -1,9 +1,9 @@
-interface Restaurant{
-  id:number,
-  name:string,
-  addressId:number
-  imageURL:string,
-  tags:Array<string>
+interface Restaurant {
+  id: number;
+  name: string;
+  addressId: number;
+  imageURL: string;
+  tags: Array<string>;
 }
 
 interface Address {
@@ -35,12 +35,12 @@ interface SearchFilter {
   sortBy: "default";
 }
 
-interface Item{
-  id:number,
-  name:string,
-  price:number,
-  description:string,
-  imageURL:string
+interface Item {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  imageURL: string;
 }
 
 export type { User, Name, Address, SearchFilter, Restaurant, Item };

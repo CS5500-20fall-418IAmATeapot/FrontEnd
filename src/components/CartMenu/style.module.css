@@ -6,49 +6,49 @@
     opacity: 1;
   }
 }
-.cartContainer{
+.cartContainer {
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-.hitBox{
+.hitBox {
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: 1;
 }
 
-.cartMenu{
+.cartMenu {
   width: 400px;
   height: 600px;
   position: absolute;
   background: white;
   animation: fadeIn ease 1s;
   z-index: 2;
-  top:40px;
-  right:60px;
+  top: 40px;
+  right: 60px;
   border-radius: 10px;
   display: grid;
-  grid-auto-rows: minmax(min-content,max-content);
+  grid-auto-rows: minmax(min-content, max-content);
   grid-row-gap: 10px;
   padding: 30px;
 }
 
-.itemList{
+.itemList {
   height: 400px;
   overflow-y: scroll;
 }
 
-.item{
+.item {
   min-height: 37px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: center;
-  border-bottom:1px beige solid ;
+  border-bottom: 1px beige solid;
 }
 
-.totalNum{
+.totalNum {
   position: absolute;
   min-width: 40px;
   height: 40px;
@@ -62,8 +62,7 @@
   padding: 5px;
 }
 
-
-.totalPrice{
+.totalPrice {
   position: absolute;
   min-width: 40px;
   height: 40px;
@@ -77,19 +76,17 @@
   padding: 5px;
 }
 
-.itemName{
+.itemName {
   justify-self: left;
 }
 
-.itemPrice{
+.itemPrice {
   justify-self: right;
-
 }
 
-.btnContainer{
+.btnContainer {
   position: relative;
 }
-
 
 .itemList::-webkit-scrollbar {
   display: none;

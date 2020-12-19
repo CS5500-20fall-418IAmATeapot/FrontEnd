@@ -6,31 +6,30 @@ import { useDispatch, useSelector } from "react-redux";
 import { addCart, removeCart } from "../../actions";
 
 interface OwnProps {
-  item:Item
-  number?:number
-  size: number
+  item: Item;
+  number?: number;
+  size: number;
 }
 
 type Props = OwnProps;
 
 const ItemCard: FunctionComponent<Props> = (props) => {
-  const [numState,setNumState] = useState(props.number||0)
+  const [numState, setNumState] = useState(props.number || 0);
   const dispatch = useDispatch();
-  const onMinusClick = ()=>{
-    if(numState>0)
-      setNumState(numState - 1);
-    dispatch({...removeCart,data:props.item})
-  }
-  const onPlusClick = ()=>{
+  const onMinusClick = () => {
+    if (numState > 0) setNumState(numState - 1);
+    dispatch({ ...removeCart, data: props.item });
+  };
+  const onPlusClick = () => {
     setNumState(numState + 1);
-    dispatch({...addCart,data:props.item})
-  }
+    dispatch({ ...addCart, data: props.item });
+  };
 
-  let styleObj:any = {
+  let styleObj: any = {
     width: props.size,
-  }
-  if(numState!==0){
-    styleObj["border"] = "3px solid #05A357"
+  };
+  if (numState !== 0) {
+    styleObj["border"] = "3px solid #05A357";
   }
 
   return (

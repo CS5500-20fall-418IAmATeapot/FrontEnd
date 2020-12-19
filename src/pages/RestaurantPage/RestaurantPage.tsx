@@ -20,22 +20,22 @@ const RestaurantPage: FunctionComponent<Props> = (props) => {
     name: "Din Tai Fung (Pacific Place)",
   };
 
-  const cart = useSelector((s:State)=>s.cart);
-  const[menuData, setMenuData] = useState([]);
-  useEffect(()=>{
-    const getData = async () =>{
+  const cart = useSelector((s: State) => s.cart);
+  const [menuData, setMenuData] = useState([]);
+  useEffect(() => {
+    const getData = async () => {
       const res = await getMenuByResId(restaurant.id);
       setMenuData(res);
-    }
+    };
     getData();
-  },[])
+  }, []);
 
   const tags = restaurant.tags;
-  [tags[0],tags[tags.length-1]] = [tags[tags.length-1],tags[0]];
+  [tags[0], tags[tags.length - 1]] = [tags[tags.length - 1], tags[0]];
   const tagsStr = tags.join(" • ");
   const deliveryTime = "35 - 45 Min •  ";
   const rating = 4.8;
-  const fee = '  • $3.49 Delivery Fee'
+  const fee = "  • $3.49 Delivery Fee";
 
   return (
     <div>
@@ -48,17 +48,11 @@ const RestaurantPage: FunctionComponent<Props> = (props) => {
         }}
       >
         <div className={style.restaurantInfo}>
-          <div className={style.title}>
-            {restaurant.name}
-          </div>
-          <div className={style.tagsInfo}>
-            {tagsStr}
-          </div>
+          <div className={style.title}>{restaurant.name}</div>
+          <div className={style.tagsInfo}>{tagsStr}</div>
           <div className={style.deliverInfo}>
             {deliveryTime}
-            <div className={style.rating}>
-              {rating}
-            </div>
+            <div className={style.rating}>{rating}</div>
             {fee}
           </div>
         </div>
@@ -67,16 +61,14 @@ const RestaurantPage: FunctionComponent<Props> = (props) => {
       <div className={style.cuisineList}>
         <div className={style.title}>Cuisine</div>
         <div className={style.cuisineContainer}>
-          {
-            menuData.map((item:Item)=>(
-              <ItemCard  item={item}
-                         number={cart.reduce((i:any)=>(item.id===i.id?0:1),0)}
-                        size={500}/>
-            ))
-          }
+          {menuData.map((item: Item) => (
+            <ItemCard
+              item={item}
+              number={cart.reduce((i: any) => (item.id === i.id ? 0 : 1), 0)}
+              size={500}
+            />
+          ))}
         </div>
-
-
       </div>
     </div>
   );

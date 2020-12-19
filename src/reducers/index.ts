@@ -7,7 +7,7 @@ export function reducer(stateBefore: State | any, action: any) {
       stateBefore.isMenuOpen = !stateBefore.isMenuOpen;
       break;
     }
-    case "toggleCart":{
+    case "toggleCart": {
       stateBefore.isCartOpen = !stateBefore.isCartOpen;
       break;
     }
@@ -23,24 +23,24 @@ export function reducer(stateBefore: State | any, action: any) {
       stateBefore.keyword = action.data;
       break;
     }
-    case "addCart":{
+    case "addCart": {
       stateBefore.cart.push(action.data);
       console.log(stateBefore.cart);
       break;
     }
-    case "removeCart":{
-      const index = stateBefore.cart.findIndex((e:Item)=>e.id === action.data.id)
-      if(index == -1)
-        break;
-      else{
-        stateBefore.cart.splice(index,1)
+    case "removeCart": {
+      const index = stateBefore.cart.findIndex(
+        (e: Item) => e.id === action.data.id
+      );
+      if (index == -1) break;
+      else {
+        stateBefore.cart.splice(index, 1);
       }
       console.log(stateBefore.cart);
       break;
-
     }
-    case "clearCart":{
-      stateBefore.cart = []
+    case "clearCart": {
+      stateBefore.cart = [];
       break;
     }
     default:

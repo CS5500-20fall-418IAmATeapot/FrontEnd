@@ -15,11 +15,15 @@ type Props = OwnProps;
 
 const RestaurantCard: FunctionComponent<Props> = (props) => {
   const history = useHistory();
-  const onCardClicked = ()=>{
+  const onCardClicked = () => {
     history.push("restaurant");
-  }
+  };
   return (
-    <div style={{ width: props.size + "vw" }} className={style.container} onClick={onCardClicked}>
+    <div
+      style={{ width: props.size + "vw" }}
+      className={style.container}
+      onClick={onCardClicked}
+    >
       <div
         className={style.imageContainer}
         style={{ backgroundImage: `URL(${props.imageURL})` }}

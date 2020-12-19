@@ -6,12 +6,11 @@
   grid-template-columns: 1fr 225px;
   grid-template-rows: repeat(9, 25px);
   box-sizing: content-box;
-  border: 3px solid rgba(255,255,255,0);
+  border: 3px solid rgba(255, 255, 255, 0);
 }
 
 .imageArea {
   grid-area: 1 / 2 / 10 / 2;
-
 }
 
 .infoArea {
@@ -30,7 +29,7 @@
   font-size: 24px;
   line-height: 28px;
   color: black;
-  text-align: left ;
+  text-align: left;
 }
 
 .itemDescription {
@@ -45,7 +44,6 @@
 }
 
 .itemPrice {
-
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -73,7 +71,7 @@
   cursor: pointer;
 }
 
-.itemSelect{
+.itemSelect {
   display: flex;
   width: 100px;
   justify-content: space-between;

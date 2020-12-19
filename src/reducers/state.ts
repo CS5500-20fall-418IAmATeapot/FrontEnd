@@ -5,14 +5,14 @@ interface State {
   isCartOpen: boolean;
   user?: User;
   keyword: string | undefined;
-  cart:Array<Item>
+  cart: Array<Item>;
 }
 
 const initialState: State = {
   isMenuOpen: false,
   isCartOpen: false,
   keyword: undefined,
-  cart:[]
+  cart: [],
 };
 
 export type { State };
