@@ -43,6 +43,9 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
             <input
               name="firstLine"
               className={style.input}
+              style={{
+                backgroundColor: `${hasInput ? "#cccccc" : "#f5f5f5"}`,
+              }}
               placeholder={"Address First Line"}
               ref={deliveryRef}
               readOnly={hasInput}
@@ -52,6 +55,9 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
             <input
               name="secondLine"
               className={style.input}
+              style={{
+                backgroundColor: `${hasInput ? "#cccccc" : "#f5f5f5"}`,
+              }}
               placeholder={"Address Second Line"}
               ref={deliveryRef}
               readOnly={hasInput}
@@ -62,7 +68,11 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
             <input
               name="city"
               className={style.input}
-              style={{ width: "30%", marginRight: "5%" }}
+              style={{
+                width: "30%",
+                marginRight: "5%",
+                backgroundColor: `${hasInput ? "#cccccc" : "#f5f5f5"}`,
+              }}
               placeholder={"City"}
               ref={deliveryRef}
               readOnly={hasInput}
@@ -70,7 +80,11 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
             <input
               name="state"
               className={style.input}
-              style={{ width: "30%", marginRight: "5%" }}
+              style={{
+                width: "30%",
+                marginRight: "5%",
+                backgroundColor: `${hasInput ? "#cccccc" : "#f5f5f5"}`,
+              }}
               placeholder={"State"}
               ref={deliveryRef}
               readOnly={hasInput}
@@ -78,7 +92,10 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
             <input
               name="zipcode"
               className={style.input}
-              style={{ width: "30%" }}
+              style={{
+                width: "30%",
+                backgroundColor: `${hasInput ? "#cccccc" : "#f5f5f5"}`,
+              }}
               placeholder={"Zip Code"}
               ref={deliveryRef}
               readOnly={hasInput}
@@ -89,6 +106,9 @@ const OrderConfirmPage: FunctionComponent<Props> = (props) => {
             <input
               name="instructions"
               className={style.input}
+              style={{
+                backgroundColor: `${hasInput ? "#cccccc" : "#f5f5f5"}`,
+              }}
               placeholder={"Add delivery instructions"}
               ref={deliveryRef}
               readOnly={hasInput}
